@@ -1,0 +1,44 @@
+@use "../../styles/global" as *;
+@use "../../styles/mixins" as *;
+@use "../../styles/typography" as *;
+@use "../../styles/variable" as *;
+
+.NavBar {
+  &__container {
+    background-color: $instock-graphite;
+    @include mobile {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+    @include tablet {
+    }
+    @include desktop {
+    }
+  }
+
+  &__button {
+    @include mobile {
+      background-color: $instock-graphite;
+      color: white;
+    }
+    @include tablet {
+    }
+    @include desktop {
+    }
+
+    &--container {
+      @include mobile {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+      }
+      @include tablet {
+      }
+      @include desktop {
+      }
+    }
+  }
+}

@@ -1,0 +1,37 @@
+@use "../../styles/global" as *;
+@use "../../styles/mixins" as *;
+@use "../../styles/typography" as *;
+@use "../../styles/variable" as *;
+
+.WarehouseList {
+  &__container {
+    @include mobile {
+      min-width: 343px;
+    }
+    @include tablet {
+    }
+    @include desktop {
+    }
+  }
+
+  &__funcbar {
+    @include mobile {
+      display: flex;
+      flex-direction: column;
+    }
+    @include tablet {
+    }
+    @include desktop {
+    }
+
+    &--searchinput {
+      @include mobile {
+        border: 1px solid black;
+      }
+      @include tablet {
+      }
+      @include desktop {
+      }
+    }
+  }
+}

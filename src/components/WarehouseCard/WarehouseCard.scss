@@ -1,0 +1,62 @@
+@use "../../styles/global" as *;
+@use "../../styles/mixins" as *;
+@use "../../styles/typography" as *;
+@use "../../styles/variable" as *;
+
+.WarehouseCard {
+  &__container {
+    @include mobile {
+      display: flex;
+      flex-direction: column;
+      border-top: 1px solid black;
+    }
+    @include tablet {
+    }
+    @include desktop {
+    }
+  }
+
+  &__info {
+    &--container {
+      @include mobile {
+        display: flex;
+        flex-direction: row;
+      }
+      @include tablet {
+      }
+      @include desktop {
+      }
+    }
+
+    &--subcontainer {
+      @include mobile {
+        display: flex;
+        flex-direction: column;
+      }
+      @include tablet {
+      }
+      @include desktop {
+      }
+    }
+  }
+
+  &__title {
+    @include mobile {
+      color: $instock-slate;
+    }
+    @include tablet {
+    }
+    @include desktop {
+    }
+  }
+
+  &__subtitle {
+    @include mobile {
+      color: $instock-black;
+    }
+    @include tablet {
+    }
+    @include desktop {
+    }
+  }
+}
