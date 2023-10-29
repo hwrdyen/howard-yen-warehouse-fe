@@ -3,10 +3,12 @@ import "./WarehousePage.scss";
 // Components
 import WarehouseList from "../../components/WarehouseList/WarehouseList";
 
-function WarehousePage() {
+function WarehousePage(props) {
   return (
     <>
-      <WarehouseList />
+      <div className="WarehousePage__container">
+        <WarehouseList AllWarehouseInfo={props.AllWarehouseInfo} />
+      </div>
     </>
   );
 }

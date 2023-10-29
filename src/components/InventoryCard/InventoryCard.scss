@@ -3,12 +3,11 @@
 @use "../../styles/typography" as *;
 @use "../../styles/variable" as *;
 
-.WarehouseCard {
+.InventoryCard {
   &__container {
     @include mobile {
       display: flex;
       flex-direction: column;
-      gap: 16px;
       border-top: 1px solid black;
       padding: 24px;
     }
@@ -23,7 +22,6 @@
       @include mobile {
         display: flex;
         flex-direction: row;
-        justify-content: center;
         gap: 35px;
       }
       @include tablet {
@@ -48,29 +46,6 @@
       @include mobile {
         display: flex;
         flex-direction: column;
-      }
-      @include tablet {
-      }
-      @include desktop {
-      }
-    }
-
-    &__title {
-      @include mobile {
-        color: $instock-slate;
-      }
-      @include tablet {
-      }
-      @include desktop {
-      }
-    }
-
-    &--subtitle {
-      color: $instock-black;
-      @include mobile {
-        display: flex;
-        flex-direction: row;
-        align-items: center;
       }
       @include tablet {
       }

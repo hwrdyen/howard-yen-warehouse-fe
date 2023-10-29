@@ -10,7 +10,7 @@ function NavBar() {
       <div className="NavBar__container">
         <NavLink to={"/"}>
           <img
-            className="NavBar__Image"
+            className="NavBar__image"
             src={InStock_Logo}
             alt="InStock Logo"
           />

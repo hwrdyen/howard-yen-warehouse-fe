@@ -1,9 +1,12 @@
 import "./InventoryPage.scss";
 
-function InventoryPage() {
+// Components
+import InventoryList from "../../components/InventoryList/InventoryList";
+
+function InventoryPage(props) {
   return (
     <>
-      <div>This is Inventory Page</div>
+      <InventoryList AllInventoryInfo={props.AllInventoryInfo} />
     </>
   );
 }

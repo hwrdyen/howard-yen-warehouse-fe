@@ -1,40 +1,34 @@
 import "./WarehouseList.scss";
-import axios from "axios";
-import { useState, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 
 // Components
 import WarehouseCard from "../WarehouseCard/WarehouseCard";
 
-function WarehouseList() {
-  const [allWarehouseInfo, setallWarehouseInfo] = useState([]);
-
-  useEffect(() => {
-    function GetallWarehouseInfo() {
-      return axios
-        .get("http://localhost:8000/warehouse/all")
-        .then((element) => {
-          let allWarehouseInfoData = element.data;
-          setallWarehouseInfo(allWarehouseInfoData);
-        });
-    }
-    GetallWarehouseInfo();
-  }, [allWarehouseInfo]);
+function WarehouseList(props) {
+  const navigate = useNavigate();
 
   return (
     <>
-      {/* <div>This is Warehouse List</div> */}
       <div className="WarehouseList__container">
         <div className="WarehouseList__title">Warehouses</div>
         <div className="WarehouseList__funcbar">
-          <input className="WarehouseList__funcbar--searchinput" type="text" />
-          <button className="WarehouseList__funcbar--addmore">
-            +Add New Warehouse
+          <input
+            className="WarehouseList__funcbar--searchinput"
+            type="text"
+            name="search"
+            placeholder="Search..."
+          />
+          <button
+            className="WarehouseList__funcbar--addmore"
+            onClick={() => navigate("/warehouse/create")}
+          >
+            + Add New Warehouse
           </button>
         </div>
 
         <div>
-          {allWarehouseInfo.map((warehouse) => (
-            <WarehouseCard id={warehouse?.id} SingleWarehouseInfo={warehouse} />
+          {props.AllWarehouseInfo.map((warehouse) => (
+            <WarehouseCard SingleWarehouseInfo={warehouse} />
           ))}
         </div>
       </div>

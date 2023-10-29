@@ -1,0 +1,46 @@
+@use "../../styles/global" as *;
+@use "../../styles/mixins" as *;
+@use "../../styles/typography" as *;
+@use "../../styles/variable" as *;
+
+.WarehouseInventoryCard {
+  &__container {
+    @include mobile {
+      border-top: 1px solid black;
+      padding: 24px;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+    @include tablet {
+    }
+    @include desktop {
+    }
+  }
+
+  &__info {
+    &--container {
+      @include mobile {
+        display: flex;
+        flex-direction: row;
+        gap: 73px;
+      }
+      @include tablet {
+      }
+      @include desktop {
+      }
+    }
+
+    &--subtitlelink {
+      @include mobile {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+      }
+      @include tablet {
+      }
+      @include desktop {
+      }
+    }
+  }
+}

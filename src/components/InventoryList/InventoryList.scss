@@ -3,7 +3,7 @@
 @use "../../styles/typography" as *;
 @use "../../styles/variable" as *;
 
-.WarehouseList {
+.InventoryList {
   &__container {
     @include mobile {
       padding-top: 32px;
@@ -59,8 +59,8 @@
     &--addmore {
       @include mobile {
         margin: 0px 24px;
-        color: white;
         background-color: $instock-blue;
+        color: $instock-white;
         min-height: 36px;
         border-radius: 20px;
       }

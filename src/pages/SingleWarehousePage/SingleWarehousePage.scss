@@ -3,10 +3,9 @@
 @use "../../styles/typography" as *;
 @use "../../styles/variable" as *;
 
-.WarehouseList {
+.SingleWarehousePage {
   &__container {
     @include mobile {
-      padding-top: 32px;
       margin-left: $mobile-side-margin;
       margin-right: $mobile-side-margin;
       box-shadow: 0px 2px 5px 0px #13182c1a;
@@ -21,34 +20,32 @@
     @include mobile {
       font-size: 28px;
       font-weight: 600;
-      margin: 0px 24px;
-      margin-bottom: 16px;
     }
     @include tablet {
     }
     @include desktop {
+    }
+
+    &--container {
+      @include mobile {
+        display: flex;
+        flex-direction: row;
+        margin: 24px;
+      }
+      @include tablet {
+      }
+      @include desktop {
+      }
     }
   }
 
-  &__funcbar {
-    @include mobile {
-      display: flex;
-      flex-direction: column;
-      gap: 16px;
-      margin-bottom: 24px;
-    }
-    @include tablet {
-    }
-    @include desktop {
-    }
-
-    &--searchinput {
+  &__info {
+    &--container {
       @include mobile {
-        margin: 0px 24px;
-        padding: 8px 0px 8px 16px;
-        border: 1px solid black;
-        min-height: 20px;
-        border-radius: 20px;
+        display: flex;
+        flex-direction: row;
+        padding: 16px 24px;
+        border-top: 1px solid black;
       }
       @include tablet {
       }
@@ -56,13 +53,23 @@
       }
     }
 
-    &--addmore {
+    &--container {
       @include mobile {
-        margin: 0px 24px;
-        color: white;
-        background-color: $instock-blue;
-        min-height: 36px;
-        border-radius: 20px;
+        display: flex;
+        flex-direction: column;
+        gap: 36px;
+      }
+      @include tablet {
+      }
+      @include desktop {
+      }
+    }
+
+    &--subcomponent {
+      @include mobile {
+        display: flex;
+        flex-direction: row;
+        gap: 16px;
       }
       @include tablet {
       }

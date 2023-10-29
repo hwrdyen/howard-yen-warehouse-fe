@@ -10,7 +10,7 @@
       display: flex;
       flex-direction: column;
       align-items: center;
-      justify-content: center;
+      min-height: 200px;
     }
     @include tablet {
     }
@@ -20,8 +20,12 @@
 
   &__button {
     @include mobile {
-      background-color: $instock-graphite;
+      background-color: $instock-black;
       color: white;
+      min-height: 36px;
+      min-width: 163px;
+      border-radius: 20px;
+      text-align: center;
     }
     @include tablet {
     }
@@ -33,12 +37,23 @@
         display: flex;
         flex-direction: row;
         align-items: center;
-        justify-content: center;
+        justify-content: space-between;
+        margin: 0px 16px;
       }
       @include tablet {
       }
       @include desktop {
       }
+    }
+  }
+
+  &__image {
+    @include mobile {
+      margin: 24px 0px;
+    }
+    @include tablet {
+    }
+    @include desktop {
     }
   }
 }

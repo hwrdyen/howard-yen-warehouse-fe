@@ -3,14 +3,10 @@
 @use "../../styles/typography" as *;
 @use "../../styles/variable" as *;
 
-.WarehouseCard {
+.DeleteWarehousePage {
   &__container {
     @include mobile {
-      display: flex;
-      flex-direction: column;
-      gap: 16px;
-      border-top: 1px solid black;
-      padding: 24px;
+      margin: 16px;
     }
     @include tablet {
     }
@@ -18,21 +14,22 @@
     }
   }
 
-  &__info {
+  &__closeicon {
     &--container {
       @include mobile {
         display: flex;
         flex-direction: row;
-        justify-content: center;
-        gap: 35px;
+        justify-content: end;
       }
       @include tablet {
       }
       @include desktop {
       }
     }
+  }
 
-    &--subcontainer {
+  &__title {
+    &--container {
       @include mobile {
         display: flex;
         flex-direction: column;
@@ -44,62 +41,58 @@
       }
     }
 
-    &--subcomponent {
-      @include mobile {
-        display: flex;
-        flex-direction: column;
-      }
-      @include tablet {
-      }
-      @include desktop {
-      }
-    }
-
-    &__title {
-      @include mobile {
-        color: $instock-slate;
-      }
-      @include tablet {
-      }
-      @include desktop {
-      }
-    }
-
-    &--subtitle {
-      color: $instock-black;
-      @include mobile {
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-      }
-      @include tablet {
-      }
-      @include desktop {
-      }
-    }
-
-    &--subtitlelink {
-      @include mobile {
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-      }
-      @include tablet {
-      }
-      @include desktop {
-      }
-    }
-  }
-
-  &__buttoncontainer {
     @include mobile {
-      display: flex;
-      flex-direction: row;
-      justify-content: space-between;
+      font-size: 28px;
+      font-weight: 600;
     }
     @include tablet {
     }
     @include desktop {
+    }
+  }
+
+  &__button {
+    &--container {
+      @include mobile {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        margin: 24px 0px;
+      }
+      @include tablet {
+      }
+      @include desktop {
+      }
+    }
+
+    &--cancel {
+      @include mobile {
+        padding: 8px 63px;
+        min-height: 36px;
+        border-radius: 20px;
+        border: 1px solid #bdc5d5;
+        color: $instock-slate;
+        background-color: linear-gradient(0deg, #bdc5d5, #bdc5d5),
+          linear-gradient(0deg, #ffffff, #ffffff);
+      }
+      @include tablet {
+      }
+      @include desktop {
+      }
+    }
+
+    &--delete {
+      @include mobile {
+        padding: 8px 63px;
+        min-height: 36px;
+        border-radius: 20px;
+        color: $instock-white;
+        background-color: #c94515;
+      }
+      @include tablet {
+      }
+      @include desktop {
+      }
     }
   }
 }
